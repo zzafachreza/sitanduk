@@ -39,6 +39,11 @@ import {
   GameGambar4,
   Kategori,
   Add,
+  PageCariBerkas,
+  PageInformasiPersyaratan,
+  PageVerifikasiBerkas,
+  PageForm,
+  PageDasarHukum,
 
 
 
@@ -89,6 +94,13 @@ export default function Router() {
       <Stack.Screen name="Kategori" component={Kategori} options={{ headerShown: false }} />
 
       <Stack.Screen name="Add" component={Add} options={{ headerShown: false }} />
+
+
+      <Stack.Screen name="PageCariBerkas" component={PageCariBerkas} options={{ headerShown: false }} />
+      <Stack.Screen name="PageInformasiPersyaratan" component={PageInformasiPersyaratan} options={{ headerShown: false }} />
+      <Stack.Screen name="PageVerifikasiBerkas" component={PageVerifikasiBerkas} options={{ headerShown: false }} />
+      <Stack.Screen name="PageForm" component={PageForm} options={{ headerShown: false }} />
+      <Stack.Screen name="PageDasarHukum" component={PageDasarHukum} options={{ headerShown: false }} />
 
 
 

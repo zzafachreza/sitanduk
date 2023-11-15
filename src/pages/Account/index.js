@@ -133,64 +133,20 @@ export default function ({ navigation, route }) {
 
                             color: colors.black
                         }}>Profile</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('AccountEdit', user)} style={{
-                            padding: 5,
-                            borderRadius: 5,
-                        }}>
-                            <Text style={{
-                                textAlign: 'center',
-                                fontFamily: fonts.primary[400],
-                                fontSize: windowWidth / 18,
-                                color: colors.primary
-                            }}>Edit</Text>
-                        </TouchableOpacity>
+
                     </View>
 
                     <View style={{
                         backgroundColor: colors.white,
                         margin: 10,
                     }}>
-                        <View style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
-                            <View style={{
-                                width: 100,
-                                height: 100,
-                            }}>
-                                <Image source={{
-                                    uri: user.foto_user
-                                }} style={{
-                                    width: 80,
-                                    height: 80,
-                                    borderRadius: 40,
-                                }} />
-                            </View>
-                            <View style={{
-                                paddingLeft: 10,
-                            }}>
-                                <Text style={{
-                                    fontFamily: fonts.primary[600],
-                                    fontSize: windowWidth / 22,
-                                    color: colors.black
-                                }}>Halo,</Text>
-                                <Text style={{
-                                    fontFamily: fonts.primary[400],
-                                    fontSize: windowWidth / 22,
-                                    color: colors.black
-                                }}>{user.nama_lengkap}</Text>
-                                <Text style={{
-                                    fontFamily: fonts.primary[600],
-                                    fontSize: windowWidth / 28,
-                                    color: colors.primary
-                                }}>{user.level}</Text>
-                            </View>
-                        </View>
+
                         <View style={{ padding: 10, }}>
                             <MyList label="Username" value={user.username} />
 
 
-                            <MyList label="Phone" value={user.telepon} />
+                            <MyList label="Jabatan / Nama" value={user.nama_lengkap} />
+                            <MyList label="Level" value={user.level} />
 
 
                         </View>

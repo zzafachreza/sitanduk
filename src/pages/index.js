@@ -36,6 +36,12 @@ import GameGambar3 from './GameGambar3';
 import GameGambar4 from './GameGambar4';
 import Kategori from './Kategori';
 import Add from './Add';
+import PageCariBerkas from './PageData/PageCariBerkas';
+import PageInformasiPersyaratan from './PageData/PageInformasiPersyaratan';
+import PageVerifikasiBerkas from './PageData/PageVerifikasiBerkas';
+import PageForm from './PageData/PageForm';
+import PageDasarHukum from './PageData/PageDasarHukum';
+
 
 
 
@@ -80,7 +86,12 @@ export {
   GameGambar4,
 
 
-  Kategori
+  Kategori,
+  PageCariBerkas,
+  PageInformasiPersyaratan,
+  PageVerifikasiBerkas,
+  PageForm,
+  PageDasarHukum
 
 
 };

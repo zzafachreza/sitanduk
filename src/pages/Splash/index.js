@@ -19,7 +19,14 @@ export default function Splash({ navigation }) {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Home');
+      getData('user').then(res => {
+        if (!res) {
+          navigation.replace('Login')
+        } else {
+          // navigation.replace('GetStarted')
+          navigation.replace('Home')
+        }
+      })
     }, 1500)
   }, []);
 
@@ -40,9 +47,9 @@ export default function Splash({ navigation }) {
 
       <Text style={{
         marginTop: 20,
-        fontFamily: fonts.primary[600],
+        fontFamily: fonts.normal,
         fontSize: 20,
-      }}>SISTEM INFORMASI TANAH PENDUDUK</Text>
+      }}>SISTEM INFORMASI TANAH PENDUDUK (SITANDUK)</Text>
 
       <View style={{
         marginTop: 10,

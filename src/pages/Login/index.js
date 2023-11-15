@@ -77,17 +77,19 @@ export default function Login({ navigation }) {
 
 
         <View style={{
+          paddingTop: 50,
           justifyContent: 'center',
           alignItems: 'center'
         }}>
-          <Text style={{
-            marginTop: 120,
-            fontSize: windowWidth / 12,
-            fontFamily: fonts.primary[800],
-            color: colors.secondary,
 
-          }}>Selamat datang</Text>
+          <Image source={require('../../assets/logo.png')} style={{
+            width: windowWidth / 2,
+            height: windowWidth / 2,
+            resizeMode: 'contain'
+          }} />
+
         </View>
+
 
 
         <View style={{
@@ -152,22 +154,6 @@ export default function Login({ navigation }) {
         </View>}
       </ScrollView>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Register')} style={{
-        padding: 10,
-        backgroundColor: colors.white,
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}><Text style={{
-        fontSize: windowWidth / 28,
-        fontFamily: fonts.primary[400],
-        textAlign: 'center',
-        color: colors.primary
-      }}>Belum memiliki Akun ? <Text style={{
-        fontSize: windowWidth / 28,
-        fontFamily: fonts.primary[600],
-        textAlign: 'center',
-        color: colors.black
-      }}>Daftar disini</Text></Text></TouchableOpacity>
     </>
   );
 }
