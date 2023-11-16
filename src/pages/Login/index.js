@@ -82,9 +82,9 @@ export default function Login({ navigation }) {
           alignItems: 'center'
         }}>
 
-          <Image source={require('../../assets/logo.png')} style={{
-            width: windowWidth / 2,
-            height: windowWidth / 2,
+          <Image source={require('../../assets/logo_datar.png')} style={{
+            width: windowWidth / 1.3,
+            height: windowWidth / 3,
             resizeMode: 'contain'
           }} />
 

@@ -69,7 +69,7 @@ export default function Home({ navigation, route }) {
           <Image source={{
             uri: item.image
           }} style={{
-            // flex: 1,
+            flex: 0.35,
             width: 40,
             height: 40,
             resizeMode: 'contain'
@@ -79,7 +79,7 @@ export default function Home({ navigation, route }) {
             fontFamily: fonts.secondary[600],
             fontSize: 18,
             color: colors.secondary,
-            textAlign: 'center'
+            // textAlign: 'center'
           }}>{item.judul}</Text>
         </View>
       </TouchableWithoutFeedback>
@@ -111,9 +111,10 @@ export default function Home({ navigation, route }) {
             flexDirection: 'row',
             alignItems: 'center'
           }}>
-            <Image source={require('../../assets/logo.png')} style={{
-              width: 70,
-              height: 70,
+            <Image source={require('../../assets/logo_datar.png')} style={{
+              width: 180,
+              resizeMode: 'contain',
+              height: 50,
             }} />
             <View style={{
               paddingLeft: 10,

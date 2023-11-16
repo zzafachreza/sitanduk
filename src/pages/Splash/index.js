@@ -39,20 +39,22 @@ export default function Splash({ navigation }) {
       alignItems: 'center'
     }}>
 
-      <Image source={require('../../assets/logo.png')} style={{
-        width: windowWidth / 2,
-        height: windowWidth / 2,
+      <Image source={require('../../assets/logo_datar.png')} style={{
+        width: windowWidth / 1.3,
+        height: windowWidth / 3,
         resizeMode: 'contain'
       }} />
 
       <Text style={{
         marginTop: 20,
         fontFamily: fonts.normal,
-        fontSize: 20,
+        fontSize: 22,
+        textAlign: 'center',
+        maxWidth: '80%'
       }}>SISTEM INFORMASI TANAH PENDUDUK (SITANDUK)</Text>
 
       <View style={{
-        marginTop: 10,
+        marginTop: 20,
         padding: 10,
       }}>
         <ActivityIndicator color={colors.secondary} size="large" />

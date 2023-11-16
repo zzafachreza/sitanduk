@@ -138,31 +138,31 @@ export default function PageCariBerkas({ navigation, route }) {
                     padding: 10,
                     marginTop: 10,
                 }}>
-                    <MYListData label="status_sppt" value={data.status_sppt} />
+                    <MYListData label="status sppt" value={data.status_sppt} />
                     <MYListData label="keterangan" value={data.keterangan} />
                     <MYListData label="nop" value={data.nop} />
-                    <MYListData label="thn_pajak_sppt" value={data.thn_pajak_sppt} />
-                    <MYListData label="tgl_jatuh_tempo_pembayaran" value={data.tgl_jatuh_tempo_pembayaran} />
-                    <MYListData label="nm_wp_sppt" value={data.nm_wp_sppt} />
-                    <MYListData label="pbb_yg_harus_dibayar_sppt" value={data.pbb_yg_harus_dibayar_sppt} />
+                    <MYListData label="thn pajak sppt" value={data.thn_pajak_sppt} />
+                    <MYListData label="tgl jatuh tempo pembayaran" value={data.tgl_jatuh_tempo_pembayaran} />
+                    <MYListData label="nm wp sppt" value={data.nm_wp_sppt} />
+                    <MYListData label="pbb yg harus dibayar sppt" value={data.pbb_yg_harus_dibayar_sppt} />
                     <MYListData label="status" value={data.status} />
-                    <MYListData label="nm_kecamatan" value={data.nm_kecamatan} />
-                    <MYListData label="nm_kelurahan" value={data.nm_kelurahan} />
-                    <MYListData label="tgl_cetak_sppt" value={data.tgl_cetak_sppt} />
-                    <MYListData label="alamat_wp" value={data.alamat_wp} />
-                    <MYListData label="alamat_op" value={data.alamat_op} />
-                    <MYListData label="nm_jpb" value={data.nm_jpb} />
-                    <MYListData label="rw_op" value={data.rw_op} />
-                    <MYListData label="rt_op" value={data.rt_op} />
-                    <MYListData pdf label="scan_surat_pengantar_rt_rw" value={data.scan_surat_pengantar_rt_rw} />
-                    <MYListData pdf label="scan_ktp_dan_kk" value={data.scan_ktp_dan_kk} />
-                    <MYListData pdf label="scan_sertipikat_rumah" value={data.scan_sertipikat_rumah} />
-                    <MYListData pdf label="scan_akta_jual_beli" value={data.scan_akta_jual_beli} />
-                    <MYListData pdf label="scan_nop" value={data.scan_nop} />
-                    <MYListData pdf label="scan_ktp_saksi_2_orang" value={data.scan_ktp_saksi_2_orang} />
-                    <MYListData pdf label="scan_surat_pernyataan_status_tanah_tidak_sengketa" value={data.scan_surat_pernyataan_status_tanah_tidak_sengketa} />
-                    <MYListData pdf label="scan_surat_pernyataan_penguasaan_fisik_bidang_tanah" value={data.scan_surat_pernyataan_penguasaan_fisik_bidang_tanah} />
-                    <MYListData pdf label="scan_foto_rumah" value={data.scan_foto_rumah} />
+                    <MYListData label="nm kecamatan" value={data.nm_kecamatan} />
+                    <MYListData label="nm kelurahan" value={data.nm_kelurahan} />
+                    <MYListData label="tgl cetak sppt" value={data.tgl_cetak_sppt} />
+                    <MYListData label="alamat wp" value={data.alamat_wp} />
+                    <MYListData label="alamat op" value={data.alamat_op} />
+                    <MYListData label="nm jpb" value={data.nm_jpb} />
+                    <MYListData label="rw op" value={data.rw_op} />
+                    <MYListData label="rt op" value={data.rt_op} />
+                    <MYListData pdf label="scan surat pengantar rt rw" value={data.scan_surat_pengantar_rt_rw} />
+                    <MYListData pdf label="scan ktp dan kk" value={data.scan_ktp_dan_kk} />
+                    <MYListData pdf label="scan sertipikat_rumah" value={data.scan_sertipikat_rumah} />
+                    <MYListData pdf label="scan akta jual beli" value={data.scan_akta_jual_beli} />
+                    <MYListData pdf label="scan nop" value={data.scan_nop} />
+                    <MYListData pdf label="scan ktp saksi 2 orang" value={data.scan_ktp_saksi_2_orang} />
+                    <MYListData pdf label="scan surat pernyataan status tanah tidak_sengketa" value={data.scan_surat_pernyataan_status_tanah_tidak_sengketa} />
+                    <MYListData pdf label="scan surat pernyataan penguasaan fisik bidang tanah" value={data.scan_surat_pernyataan_penguasaan_fisik_bidang_tanah} />
+                    <MYListData pdf label="scan foto rumah" value={data.scan_foto_rumah} />
                 </View>}
             </ScrollView>
         </SafeAreaView>
