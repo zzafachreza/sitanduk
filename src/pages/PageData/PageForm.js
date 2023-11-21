@@ -102,6 +102,7 @@ export default function PageForm({ navigation, route }) {
 
                 <FlatList data={data} renderItem={MYListData} />
             </ScrollView>
+            <MyButton title="Uplad Formulir" radius={0} onPress={() => navigation.navigate('PageDataFormUpload')} />
         </SafeAreaView>
     )
 }

@@ -44,6 +44,7 @@ import {
   PageVerifikasiBerkas,
   PageForm,
   PageDasarHukum,
+  PageDataFormUpload,
 
 
 
@@ -104,6 +105,7 @@ export default function Router() {
       <Stack.Screen name="PageDasarHukum" component={PageDasarHukum} options={{ headerShown: false }} />
 
       <Stack.Screen name="PageInformasiPersyaratanDetail" component={PageInformasiPersyaratanDetail} options={{ headerShown: false }} />
+      <Stack.Screen name="PageDataFormUpload" component={PageDataFormUpload} options={{ headerShown: false }} />
 
 
 

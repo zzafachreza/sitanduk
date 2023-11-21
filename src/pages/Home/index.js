@@ -170,7 +170,11 @@ export default function Home({ navigation, route }) {
         </TouchableOpacity>
 
 
-
+        <TouchableOpacity onPress={() => navigation.navigate('Feature')} style={{
+          padding: 10,
+        }}>
+          <Icon type='ionicon' name='list' color={colors.white} size={20} />
+        </TouchableOpacity>
 
 
         <TouchableOpacity onPress={() => navigation.navigate('Account')} style={{

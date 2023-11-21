@@ -41,6 +41,7 @@ import PageInformasiPersyaratan from './PageData/PageInformasiPersyaratan';
 import PageVerifikasiBerkas from './PageData/PageVerifikasiBerkas';
 import PageForm from './PageData/PageForm';
 import PageDasarHukum from './PageData/PageDasarHukum';
+import PageDataFormUpload from './PageData/PageDataFormUpload';
 
 
 
@@ -91,7 +92,8 @@ export {
   PageInformasiPersyaratan,
   PageVerifikasiBerkas,
   PageForm,
-  PageDasarHukum
+  PageDasarHukum,
+  PageDataFormUpload
 
 
 };
