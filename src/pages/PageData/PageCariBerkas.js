@@ -156,11 +156,11 @@ export default function PageCariBerkas({ navigation, route }) {
                     <MYListData label="rt op" value={data.rt_op} />
                     <MYListData pdf label="scan surat pengantar rt rw" value={data.scan_surat_pengantar_rt_rw} />
                     <MYListData pdf label="scan ktp dan kk" value={data.scan_ktp_dan_kk} />
-                    <MYListData pdf label="scan sertipikat_rumah" value={data.scan_sertipikat_rumah} />
+                    <MYListData pdf label="scan sertipikat rumah" value={data.scan_sertipikat_rumah} />
                     <MYListData pdf label="scan akta jual beli" value={data.scan_akta_jual_beli} />
                     <MYListData pdf label="scan nop" value={data.scan_nop} />
                     <MYListData pdf label="scan ktp saksi 2 orang" value={data.scan_ktp_saksi_2_orang} />
-                    <MYListData pdf label="scan surat pernyataan status tanah tidak_sengketa" value={data.scan_surat_pernyataan_status_tanah_tidak_sengketa} />
+                    <MYListData pdf label="scan surat pernyataan status tanah tidak sengketa" value={data.scan_surat_pernyataan_status_tanah_tidak_sengketa} />
                     <MYListData pdf label="scan surat pernyataan penguasaan fisik bidang tanah" value={data.scan_surat_pernyataan_penguasaan_fisik_bidang_tanah} />
                     <MYListData pdf label="scan foto rumah" value={data.scan_foto_rumah} />
                 </View>}

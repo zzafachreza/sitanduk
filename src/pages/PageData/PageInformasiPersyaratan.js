@@ -1,6 +1,6 @@
 import { FlatList, Image, Linking, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler'
 import { colors, fonts, windowHeight } from '../../utils'
 import { MyButton, MyGap, MyInput, MyPicker } from '../../components'
 import axios from 'axios';
@@ -9,29 +9,7 @@ import { showMessage } from 'react-native-flash-message'
 
 
 
-const MYListData = ({ item }) => {
-    return (
-        <View style={{
-            borderBottomWidth: 1,
-            borderBottomColor: colors.border,
-            paddingVertical: 4,
-        }}>
 
-            <Image source={{
-                uri: item.image
-            }} style={{
-                width: 100,
-                height: 100
-            }} />
-            <Text style={{
-                flex: 1,
-                fontFamily: fonts.secondary[600],
-                fontSize: 15,
-            }}>{item.judul}</Text>
-
-        </View>
-    )
-}
 
 export default function PageVerifikasiBerkas({ navigation, route }) {
     const item = route.params;
@@ -63,6 +41,34 @@ export default function PageVerifikasiBerkas({ navigation, route }) {
     const [data, setData] = useState({
         id_sppt: 0
     });
+
+
+    const MYListData = ({ item }) => {
+        return (
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('PageInformasiPersyaratanDetail', item)}>
+                <View style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: colors.border,
+                    paddingVertical: 4,
+                }}>
+
+                    <Image source={{
+                        uri: item.image
+                    }} style={{
+                        width: 100,
+                        height: 100
+                    }} />
+                    <Text style={{
+                        flex: 1,
+                        fontFamily: fonts.secondary[600],
+                        fontSize: 15,
+                    }}>{item.judul}</Text>
+
+                </View>
+            </TouchableWithoutFeedback>
+        )
+    }
+
 
     const getDataTransaksi = () => {
         axios.post(apiURL + 'informasi_persyaratan', kirim).then(res => {

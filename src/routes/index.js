@@ -52,6 +52,7 @@ import {
 import { colors } from '../utils';
 import { Icon } from 'react-native-elements';
 import MenuRambuK3 from '../pages/RambuK3';
+import PageInformasiPersyaratanDetail from '../pages/PageData/PageInformasiPersyaratanDetail';
 
 const Stack = createStackNavigator();
 
@@ -101,6 +102,8 @@ export default function Router() {
       <Stack.Screen name="PageVerifikasiBerkas" component={PageVerifikasiBerkas} options={{ headerShown: false }} />
       <Stack.Screen name="PageForm" component={PageForm} options={{ headerShown: false }} />
       <Stack.Screen name="PageDasarHukum" component={PageDasarHukum} options={{ headerShown: false }} />
+
+      <Stack.Screen name="PageInformasiPersyaratanDetail" component={PageInformasiPersyaratanDetail} options={{ headerShown: false }} />
 
 
 
