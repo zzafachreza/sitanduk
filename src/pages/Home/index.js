@@ -173,7 +173,7 @@ export default function Home({ navigation, route }) {
         <TouchableOpacity onPress={() => navigation.navigate('Feature')} style={{
           padding: 10,
         }}>
-          <Icon type='ionicon' name='list' color={colors.white} size={20} />
+          <Icon type='ionicon' name='server' color={colors.white} size={20} />
         </TouchableOpacity>
 
 

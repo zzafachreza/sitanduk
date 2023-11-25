@@ -12,13 +12,13 @@ import 'intl/locale-data/jsonp/en';
 import moment from 'moment';
 import 'moment/locale/id';
 
-
+import { WebView } from 'react-native-webview';
 
 import ProgressCircle from 'react-native-progress-circle'
 import { MyInput, MyButton, MyGap, MyPicker } from '../../components';
 export default function Kategori({ navigation, route }) {
 
-
+    const [loading, setLoading] = useState(true);
 
     const [data, setData] = useState({});
     const [kirim, setKirim] = useState({
@@ -152,138 +152,21 @@ export default function Kategori({ navigation, route }) {
                     color: colors.primary,
                     fontSize: 18,
 
-                }}>Arsip / Result</Text>
+                }}>Database</Text>
             </View>
 
             <View style={{
                 flex: 1,
             }}>
-                <FlatList data={data} numColumns={1} renderItem={__renderItem} />
+                <WebView onLoad={() => {
+                    setLoading(false)
+                }} source={{ uri: 'https://sitanduk.okeadmin.com/draf' }} style={{ flex: 1 }} />
+                {loading &&
+                    <ActivityIndicator size="large" style={{ position: "absolute", top: windowHeight / 2.5, left: windowWidth / 2.25 }} color={colors.primary} />
+                }
             </View>
 
-            {/* modal */}
-            <Modal
 
-                animationType="fade"
-                transparent={true}
-                visible={open}
-                onRequestClose={() => {
-                    setOpen(!open);
-                    setKirim({
-                        kode: '',
-                        fid_user: '',
-                    })
-                }}>
-                <View style={{
-                    backgroundColor: '#00000090',
-                    flex: 1,
-                    justifyContent: 'center',
-                    padding: 10
-                }}>
-                    <View style={{
-                        borderRadius: 10,
-                        padding: 20,
-                        flex: 0.5,
-                        backgroundColor: colors.white,
-                        justifyContent: 'center'
-                    }}>
-                        <ScrollView>
-                            <Text style={{
-                                fontFamily: fonts.secondary[600],
-                                color: colors.black
-                            }}>{kirim.judul}</Text>
-                            <Text style={{
-                                fontFamily: fonts.secondary[400],
-                                color: colors.black
-                            }}>{kirim.kategori}</Text>
-
-                            <Text style={{
-
-                                fontFamily: fonts.secondary[800],
-                                color: colors.secondary
-                            }}>Posisi : </Text>
-                            <Text style={{
-                                padding: 5,
-                                marginBottom: 5,
-                                backgroundColor: colors.black,
-                                color: colors.white,
-
-                            }}>  {kirim.nama_lengkap}  </Text>
-
-                            {kirim.kategori == 'Ahli Waris' || kirim.kategori == 'Riwayat Tanah' ?
-
-                                <View style={{
-                                    borderWidth: 1,
-                                    padding: 10,
-                                    borderColor: colors.secondary
-                                }}>
-                                    <View style={{
-                                        flexDirection: 'row',
-                                    }}>
-                                        <Text style={{
-                                            flex: 1,
-                                            fontFamily: fonts.secondary[400],
-                                            color: colors.black
-                                        }}>Nama</Text>
-
-                                        <Text style={{
-                                            fontFamily: fonts.secondary[600],
-                                            color: colors.black
-                                        }}>{kirim.nama}</Text>
-                                    </View>
-                                    <View style={{
-                                        flexDirection: 'row'
-                                    }}>
-                                        <Text style={{
-                                            flex: 1,
-                                            fontFamily: fonts.secondary[400],
-                                            color: colors.black
-                                        }}>Alamat</Text>
-                                        <Text style={{
-                                            fontFamily: fonts.secondary[600],
-                                            color: colors.black
-                                        }}>{kirim.alamat}</Text>
-                                    </View>
-                                    <View style={{
-                                        flexDirection: 'row'
-                                    }}>
-                                        <Text style={{
-                                            flex: 1,
-                                            fontFamily: fonts.secondary[400],
-                                            color: colors.black
-                                        }}>Nomor Surat</Text>
-                                        <Text style={{
-                                            fontFamily: fonts.secondary[600],
-                                            color: colors.black
-                                        }}>{kirim.nomor_surat}</Text>
-                                    </View>
-                                </View> : <></>}
-                            <MyGap jarak={20} />
-                            <MyPicker value={kirim.fid_user} data={pengguna} onValueChange={x => {
-                                setKirim({
-                                    ...kirim,
-                                    fid_user: x
-                                })
-                            }} label="Ubah Posisi Surat" iconname="options" />
-                            <MyGap jarak={20} />
-                            <MyButton title="Simpan" onPress={() => {
-                                console.log(kirim);
-
-                                axios.post(apiURL + 'update_arsip', kirim).then(res => {
-                                    console.log(res.data);
-                                    setOpen(false);
-                                    __getTransaction();
-
-                                })
-
-
-
-
-                            }} />
-                        </ScrollView>
-                    </View>
-                </View>
-            </Modal>
         </SafeAreaView>
     )
 }

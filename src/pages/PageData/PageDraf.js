@@ -51,7 +51,7 @@ export default function PageDraf({ navigation, route }) {
             }}>
                 <WebView onLoad={() => {
                     setLoading(false)
-                }} source={{ uri: 'https://sitanduk.okeadmin.com/verifikasi' }} style={{ flex: 1 }} />
+                }} source={{ uri: 'https://sitanduk.okeadmin.com/sppt' }} style={{ flex: 1 }} />
                 {loading &&
                     <ActivityIndicator size="large" style={{ position: "absolute", top: windowHeight / 2.5, left: windowWidth / 2.25 }} color={colors.primary} />
                 }

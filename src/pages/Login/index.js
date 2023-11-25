@@ -34,7 +34,7 @@ export default function Login({ navigation }) {
     } else {
 
 
-      // setLoading(true);
+      setLoading(true);
       console.log(kirim);
 
       axios

@@ -42,6 +42,7 @@ import PageVerifikasiBerkas from './PageData/PageVerifikasiBerkas';
 import PageForm from './PageData/PageForm';
 import PageDasarHukum from './PageData/PageDasarHukum';
 import PageDataFormUpload from './PageData/PageDataFormUpload';
+import PageDraf from './PageData/PageDraf';
 
 
 
@@ -93,7 +94,8 @@ export {
   PageVerifikasiBerkas,
   PageForm,
   PageDasarHukum,
-  PageDataFormUpload
+  PageDataFormUpload,
+  PageDraf
 
 
 };

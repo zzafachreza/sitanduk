@@ -45,6 +45,7 @@ import {
   PageForm,
   PageDasarHukum,
   PageDataFormUpload,
+  PageDraf,
 
 
 
@@ -106,6 +107,8 @@ export default function Router() {
 
       <Stack.Screen name="PageInformasiPersyaratanDetail" component={PageInformasiPersyaratanDetail} options={{ headerShown: false }} />
       <Stack.Screen name="PageDataFormUpload" component={PageDataFormUpload} options={{ headerShown: false }} />
+
+      <Stack.Screen name="PageDraf" component={PageDraf} options={{ headerShown: false }} />
 
 
 
