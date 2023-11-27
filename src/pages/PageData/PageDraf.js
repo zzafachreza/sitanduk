@@ -4,9 +4,10 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { colors, fonts, windowHeight, windowWidth } from '../../utils'
 import { MyButton, MyGap, MyInput } from '../../components'
 import axios from 'axios';
-import { apiURL, webURL } from '../../utils/localStorage'
+import { apiURL, getData, webURL } from '../../utils/localStorage'
 import { showMessage } from 'react-native-flash-message'
 import { WebView } from 'react-native-webview';
+import { useEffect } from 'react'
 
 
 
@@ -14,6 +15,13 @@ import { WebView } from 'react-native-webview';
 export default function PageDraf({ navigation, route }) {
     const [loading, setLoading] = useState(true);
     const item = route.params;
+    const [user, setUser] = useState({});
+    useEffect(() => {
+        getData('user').then(res => {
+            console.log(res);
+            setUser(res)
+        })
+    }, [])
     return (
         <SafeAreaView style={{
             flex: 1,
@@ -51,7 +59,7 @@ export default function PageDraf({ navigation, route }) {
             }}>
                 <WebView onLoad={() => {
                     setLoading(false)
-                }} source={{ uri: 'https://sitanduk.okeadmin.com/sppt' }} style={{ flex: 1 }} />
+                }} source={{ uri: 'https://sitanduk.okeadmin.com/sppt?level=' + user.level }} style={{ flex: 1 }} />
                 {loading &&
                     <ActivityIndicator size="large" style={{ position: "absolute", top: windowHeight / 2.5, left: windowWidth / 2.25 }} color={colors.primary} />
                 }

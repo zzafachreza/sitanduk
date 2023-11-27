@@ -88,6 +88,12 @@ export default function Login({ navigation }) {
             resizeMode: 'contain'
           }} />
 
+          <Text style={{
+            fontFamily: fonts.secondary[800],
+            color: colors.primary,
+            fontSize: 17,
+            textAlign: 'center'
+          }}>SISTEM INFORMASI TANAH PENDUDUK</Text>
         </View>
 
 
